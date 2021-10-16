@@ -234,6 +234,7 @@ a {
                 
             }
 
+        /*Footer*/
             
             footer {
 
@@ -254,6 +255,7 @@ a {
                 color: white;
                 display: flex;
                 align-items: center;
+                font-weight: bold;
             }
 
             footer i {
@@ -261,16 +263,77 @@ a {
                 margin-right: 10px;
             }
 
-            footer img {
+            footer h3 {
                 
-                width: 35%;
-                /* Manque couleur */
+                font-family: 'Shrikhand', sans-serif;
             }
 
 
 
+        /*Pages d'accueils*/
+
+         /*Général*/
 
 
+           .logomenu {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+           }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         /*Particularités*/
+
+            .sens {
+
+                background-image: url(images/delice.jpg);
+                background-size: 100%;
+                background-position-x: center;
+                background-position-y: center;
+
+            }
+
+            .palette {
+
+                background-image: url(images/palette.jpg);
+                background-size: 100%;
+                background-position-x: center;
+                background-position-y: center;
+
+            }
+
+            .note {
+
+                background-image: url(images/note.jpg);
+                background-size: 100%;
+                background-position-x: center;
+                background-position-y: center;
+            }
+
+            .lafrancaise {
+
+                background-image: url(images/francaise.jpg);
+                background-size: 100%;
+                background-position-x: center;
+                background-position-y: center;
+            }
 
 
 
