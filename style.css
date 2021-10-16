@@ -1,0 +1,302 @@
+/*Head*/
+
+body {
+    font: normal 1.1em 'Roboto','Shrikhand', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+a {
+ 
+    text-decoration: none;
+    color: black;
+}
+
+ ul {
+
+    list-style-type: none;
+}
+
+ img {
+
+    object-fit: cover;
+}
+
+ 
+@media screen and (min-width: 300px) and (max-width: 850px)
+
+    {
+
+                 /*Présentation restaurants*/
+
+        /*Header*/
+
+            #logo {
+
+                text-align: center;
+                margin: 30px 0;
+            }
+
+            .localisation {
+
+                display: flex;
+                flex-direction: row;
+                border: transparent;
+                background-color: rgb(228, 228, 228);
+                box-shadow: rgb(200, 200, 200) 2px -5px 9px -3px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .localisation i {
+
+                margin: 0 20px;
+                font-size: 1.4em;
+            }
+
+            .localisation p {
+
+                font-size: 1.4em;
+                font-weight: bold;
+            }
+
+            .presentation {
+
+                display: flex;
+                flex-direction: column;
+                border: solid 1px transparent;
+                background-color: rgb(243, 243, 243);
+            }
+
+            .presentation h2 {
+
+                margin-top: 30px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .presentation h4 {
+
+                color: grey;
+                font-size: 1.1em;
+                text-align: center;
+                margin-top: 5px;
+            }
+
+            .presentation button {
+
+                margin: auto;
+                margin-bottom: 35px;
+                width: 270px;
+                height: 70px;
+                color: white;
+                border: solid transparent 1px;
+                border-radius: 80px;
+                background: linear-gradient(#f16cfd, #b454d1);
+                box-shadow: 1px 5px 18px -1px rgba(118,118,118,0.38);
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+
+        /*Filtres*/
+
+
+            .filtre {
+
+                display: flex;
+                flex-direction: column;
+                align-items: space-between;
+            }
+        
+            .titrefiltres {
+
+                font-weight: bolder;
+                font-size: 1.4em;
+                margin: 20px 15px;                     
+            }
+
+            .filtrediv {
+            
+                position: relative;
+                margin: 30px 0;
+                display: flex; 
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 320px;
+                height: 70px;
+                border: solid transparent 1px;
+                border-radius: 5px;
+                background-color: rgb(238, 238, 238);
+                box-shadow: 1px 5px 18px -1px rgba(118,118,118,0.38);
+                font-weight: bold;
+            }
+
+            .number {
+
+                text-align: center;
+                position: absolute;
+                font-weight: bold;
+                font-size: 1em;
+                left: -20px;
+                width: 23px;
+                height: 21px;
+                color: white;
+                border: 1px solid transparent;
+                    border-radius: 100%;
+                    background-color: #9356DC;
+            }
+
+            .filtre i {
+
+                color: grey;
+                margin-left: 15px;
+                font-size: 1.2em;
+            }
+
+            .filtrecaption {
+
+                padding-left: 10px;
+                font-weight: bolder;
+                font-size: 0.9em;
+                padding: 0 10px;
+                text-align: center;
+            }
+
+
+        /*Restaurants*/
+            
+            .restaurants {
+
+                margin-top: 20px;
+                width: 100%;
+                border: solid 1px transparent;
+                background-color: rgb(238, 238, 238);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .restaurants h2 {
+
+                margin: 15px 10px ;
+            }
+
+            .restaurants figure {
+
+                position: relative;
+                margin: 35px 18px;
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                height: 250px;
+                position: relative;
+                display: flex;
+                border: solid 1px white;
+                background-color: white;
+                border-radius: 15px;
+                box-shadow: 5px 3px 5px 3px #D8D8D8;
+            }
+
+            .restaurants img {
+
+                width: 100%;
+                height: 150px;
+                border-radius: 15px 15px 0 0;
+            }
+
+            .new {
+
+                position: absolute;
+                top: -10px;
+                right: 5px;
+                padding: 10px;
+                border: 1px solid transparent;
+                color: #579484 ;
+                background-color: #99E2D0;
+                font-weight: bolder;
+            }
+
+            .restaurants figcaption {
+
+                position: relative;
+                margin: 10px;
+            }
+
+            .restaurants figcaption i {
+
+
+
+                position: absolute;
+                font-size: 1.8em;
+                bottom: 20px;
+                right: 10px;
+                
+            }
+
+            
+            footer {
+
+                border: 1px solid transparent;
+                background-color: rgb(42, 40, 40);
+                width: 100%;
+            }
+
+            nav {
+
+                margin: 15px;
+                font-size: 0.8;
+                display: flex;
+            }
+
+            footer li {
+
+                color: white;
+                display: flex;
+                align-items: center;
+            }
+
+            footer i {
+
+                margin-right: 10px;
+            }
+
+            footer img {
+                
+                width: 35%;
+                /* Manque couleur */
+            }
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    }
