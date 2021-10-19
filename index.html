@@ -7,10 +7,9 @@
 	    <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
         <meta name="viewport" content="initial-scale=1.0">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap');
-        </style>
+        <link href='https://fonts.googleapis.com/css2?family=Shrikhand&display=swap' rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap' rel="stylesheet">
+        
 
         <title>ohmyfood</title>
     </head> 
@@ -38,10 +37,14 @@
 
             <section class="presentation">
 
-                <h2>Réservez le menu qui <br>
-                    vous convient </br> </h2>
-                <h4>Découvrez des restaurants d'exception, <br>
-                sélctionnés par nos soins </br> </h4>
+                <h2>
+                        Réservez le menu qui <br> vous convient
+                </h2>
+                
+                <h4>
+                    Découvrez des restaurants d'exception, <br> sélectionnés par nos soins 
+                </h4>
+                
                 <button> Explorer nos restaurants</button>
             
             </section>
@@ -54,7 +57,7 @@
                          
                     <ul>
                         <li> 
-                            <a href="#">
+                            <a href="#restaurants">
                                 <div class="filtrediv"> 
                                     <p class="number">1</p>
                                     <i class="fas fa-mobile-alt"></i> 
@@ -88,30 +91,39 @@
                 </div>   
             </section>
 
-            <section class="restaurants">
+            <section id="restaurants">
 
                 <article class="article1">
 
                     <h2>Restaurants</h2>
 
-                    <a href="accueils/palette.html">
+                    
                         <figure>
-                            <img src="images/palette.jpg"> 
-                            <p class="new">Nouveau</p>
+                            <div>
+                                <a href="accueils/palette.html">
+                                    <img src="images/palette.jpg" alt="resto"> 
+                                    <p class="new">Nouveau</p>
+                                </a>
+                            </div>
                             <figcaption> 
-                                <p> <strong> La palette du goût </strong> </p> 
-                                <p> Ménilmontant</p>
-                                <div class="heart">
-                                    <i class="far fa-heart"></i>
-                                </div>
+                            <p> <strong> La palette du goût </strong> </p> 
+                            <p> Ménilmontant</p>
+                            <div class="heart">
+                                <i class="far fa-heart"></i>
+                            </div>
                             </figcaption>
                         </figure>
-                    </a>
+                    
+                    
 
-                    <a href="accueils/note.html">
+                    
                         <figure>
-                            <img src="images/note.jpg"> 
-                            <p class="new">Nouveau</p>
+                            <div>
+                                <a href="accueils/note.html">
+                                    <img src="images/note.jpg" alt="resto"> 
+                                    <p class="new">Nouveau</p>
+                                </a>
+                            <div>
                             <figcaption> 
                                 <p> <strong> La note enchantée </strong> </p> 
                                 <p> Charonne</p>
@@ -120,12 +132,16 @@
                                 </div>
                             </figcaption>
                         </figure>
-                    </a>
+                    
 
-                    <a href="accueils/lafrancaise.html">
+                    
                         <figure>
-                            <img src="images/francaise.jpg"> 
-                            <figcaption> 
+                            <div>
+                                <a href="accueils/lafrancaise.html">
+                                    <img src="images/francaise.jpg">    
+                                </a>
+                            </div>
+                            <figcaption>
                                 <p> <strong> À la française </strong> </p> 
                                 <p> Cité Rouge </p>
                                 <div class="heart">
@@ -133,11 +149,15 @@
                                 </div>
                             </figcaption>
                         </figure>
-                    </a>
+                    
 
-                    <a href="accueils/sens.html">
-                        <figure>
-                            <img src="images/delice.jpg">
+                    
+                        <figure> 
+                            <div>
+                                <a href="accueils/sens.html">
+                                    <img src="images/delice.jpg">
+                                </a>
+                            </div>
                             <figcaption> 
                                 <p> <strong> Le délice des sens </strong> </p> 
                                 <p> Folie-Méricourt</p>
@@ -146,7 +166,7 @@
                                 </div>
                             </figcaption>
                         </figure>
-                    </a>
+                   
                          
                 </article>
             </section> 
@@ -166,36 +186,39 @@
                         <h3>ohmyfood</h3>
                     </li>
 
-
-                    <a href="#">
-                        <div>
-                            <li class="ustensil"> 
-                                <i class="fas fa-utensils"></i>
-                                <p>Proposer un restaurant</p>
-                            </li>
-                        </div>
-                    </a>
+  
+                    <li class="ustensil"> 
+                        <a href="#">
+                            <i class="fas fa-utensils"></i>        
+                            <p>Proposer un restaurant</p>        
+                        </a>                
+                    </li>    
+                            
+                        
+                            
+                    <li class="partenaire"> 
+                        <a href="#">
+                            <i class="fas fa-hands-helping"> </i>
+                            <p> Devenir partenaire </p>
+                        </a>
+                    </li>
+                            
                     
-                    <a href="#">
-                        <div>
-                            <li class="partenaire"> 
-                                <i class="fas fa-hands-helping"></i>
-                                <p> Devenir partenaire </p>
-                            </li>
-                        </div>    
-                    </a>
                     
-                    <a href="#">
-                        <li>
+                    <li>
+                        <a href="#">
                             <p>Mentions légales</p>
-                        </li>
-                    </a>
+                        </a>
+                    </li>
                     
-                    <a href="mailto:ohmyfood@gmail.com">
-                        <li>
+                    
+                    
+                    <li>
+                        <a href="mailto:ohmyfood@gmail.com">
                             <p>Contact</p>
-                        </li>
-                    </a>
+                        </a>
+                    </li>
+                
                     
                 </ul>
             </nav>
