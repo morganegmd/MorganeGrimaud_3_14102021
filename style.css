@@ -514,14 +514,14 @@ img {
             transition: all 1s ease-out;
         }
             
-            .heart:hover {
+        .heart:hover {
 
 
-                animation: heart;
+            animation: heart;
 
-            }
+        }
         
-            @keyframes heart {
+        @keyframes heart {
 
                 
                 from {
@@ -541,28 +541,28 @@ img {
 
          
 
-            .loader {
-                border-top: 16px solid purple;
-                border-right: 16px solid #CDDB0B;
-                border-bottom: 16px solid #0E8F3F;
-                border-left: 16px solid pink;
-                border-radius: 50%;
-                width: 120px;
-                height: 120px;
-                animation: loading 3s linear infinite;
-              }
-              
-              @keyframes loading {
+        .loader {
                 
-                0% { 
+            border-top: 16px solid purple;
+            border-right: 16px solid #CDDB0B;
+            border-bottom: 16px solid #0E8F3F;
+            border-left: 16px solid pink;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: loading 3s linear infinite;
+        }
+              
+        @keyframes loading {
+                
+            0% { 
                     transform: rotate(0deg); 
                 }
-                100% { 
+            100%{ 
                     transform: rotate(360deg); 
                 }
+        }
          
-
-
 
 
          /*Affichage du menu en décalé*/
@@ -597,6 +597,7 @@ img {
                 }
                 100% {
                     transform: scaleX(1);
+                }
             }
 
          /*Coche plats*/
