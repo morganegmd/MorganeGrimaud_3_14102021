@@ -15,12 +15,15 @@ ul {
 a {
 
     text-decoration: none;
+    color: black;
 }
 
 img {
 
     object-fit: cover;
 }
+
+
 
 /*Présentation restaurants*/
 
@@ -91,6 +94,7 @@ img {
             box-shadow: 1px 5px 18px -1px rgba(118,118,118,0.38);
             font-size: 1.1em;
             font-weight: bold;
+            transition: all 300ms 150ms;
         }
 
          
@@ -111,13 +115,16 @@ img {
 
      /*Filtres*/
 
+        
+        .fonctionnement {
 
-        .filtre {
+            width: 50%;
+            margin: auto;
+        }
 
-            display: flex;
-            flex-direction: column;
-            align-items: space-between;
-           
+       .filtre ul {
+
+            width: 100%;
         }
     
         .titrefiltres {
@@ -131,7 +138,7 @@ img {
         
             position: relative;
             margin: 30px 20px;
-            width: 40%;
+            width: 70%;
             height: 70px;
             display: flex; 
             flex-direction: row;
@@ -182,7 +189,7 @@ img {
 
             margin: auto;
             max-width: 1350px;
-            width: 100%;
+            width: 60%;
             border: solid 1px transparent;
             background-color: rgb(238, 238, 238);
             display: flex;
@@ -201,7 +208,7 @@ img {
 
             position: relative;
             font-size: 1.6em;
-            left: 210px;
+            left: 120px;
             top: 20px;
         }
 
@@ -210,10 +217,11 @@ img {
             position: relative;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 25px;
             display: flex;
             flex-direction: column;
             width: 70%;
-            height: 445px;
+            height: 320px;
             position: relative;
             display: flex;
             border: solid 1px white;
@@ -225,7 +233,8 @@ img {
         #restaurants img {
 
             width: 100%;
-            height: 330px;
+            margin: 0;
+            height: 210px;
             border-radius: 15px 15px 0 0;
         }
 
@@ -233,9 +242,9 @@ img {
         .new {
 
             position: absolute;
-            top: -10px;
-            right: 5px;
-            padding: 10px;
+            top: -5px;
+            right: 10px;
+            padding: 15px;
             border: 1px solid transparent;
             color: #579484 ;
             background-color: #99E2D0;
@@ -249,7 +258,7 @@ img {
             margin: 8px;
         }
 
-        #restaurants .heart {
+        .heart {
 
             position: absolute;
             font-size: 1.8em;
@@ -490,6 +499,140 @@ img {
 
 
      /*Les animations*/
+         
+         /*Bouton "J'aime"*/
+
+        
+         .heart  {
+
+
+
+            position: absolute;
+            font-size: 1.8em;
+            bottom: 20px;
+            right: 10px;
+            transition: all 1s ease-out;
+        }
+            
+            .heart:hover {
+
+
+                animation: heart;
+
+            }
+        
+            @keyframes heart {
+
+                
+                from {
+                    transform: scaleX(0);
+                    color: #FF79DA ;
+                }
+                
+                to {
+                    transform: scaleX(1);
+                    color: #FF79DA;
+                }
+                
+                
+            }
+
+         /*Loading spinner*/
+
+         
+
+            .loader {
+                border-top: 16px solid purple;
+                border-right: 16px solid #CDDB0B;
+                border-bottom: 16px solid #0E8F3F;
+                border-left: 16px solid pink;
+                border-radius: 50%;
+                width: 120px;
+                height: 120px;
+                animation: loading 3s linear infinite;
+              }
+              
+              @keyframes loading {
+                
+                0% { 
+                    transform: rotate(0deg); 
+                }
+                100% { 
+                    transform: rotate(360deg); 
+                }
+         
+
+
+
+
+         /*Affichage du menu en décalé*/
+
+
+            .menu {
+
+                animation: progress-menu 1.3s;
+            }
+
+            @keyframes progress-menu {
+                
+                0% {
+                    transform: scaleX(0);
+                    opacity: .1;
+                }
+                
+                17% {
+                    transform: scaleX(.18);
+                }
+                
+                24% {
+                    transform: scaleX(.4);
+                }
+                
+                46% {
+                    transform: scaleX(.81);
+                }
+                
+                85%,100% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: scaleX(1);
+            }
+
+         /*Coche plats*/
+
+
+         span {
+
+            display: none;
+         }
+         
+         
+         span:hover { 
+             
+            display: flex;
+            color: white;
+            width: 10%;
+            overflow: hidden;
+            transform: rotate(-360deg);
+            transition: transform 1s ease-out;
+         }
+
+         span:hover + .validation {
+
+            width: 20%;
+            border: solid 1px transparent;
+            background-color: #99E2D0;
+            transform: scale (2,1);
+         }
+        
+         
+       .validation {
+
+         transition: transform 330ms ease-in-out;
+       }
+    
+
 
 
 
@@ -502,10 +645,11 @@ img {
 
 {
 
-    .filtrediv {
+    body {
 
-        width: 40%;
+        width: 100%;
     }
+    
 
     .new {
 
@@ -519,12 +663,12 @@ img {
     #restaurants figure {
 
        
-        width: 93%;
+        width: 100%;
         height: 340px;
         
     }
 
-    #restaurants .heart {
+    .heart {
 
 
 
@@ -619,6 +763,7 @@ img {
                 box-shadow: 1px 5px 18px -1px rgba(118,118,118,0.38);
                 font-size: 1.1em;
                 font-weight: bold;
+                transition: all 300ms 150ms;
             }
             
             button:hover {
@@ -763,16 +908,7 @@ img {
                 margin: 10px;
             }
 
-            #restaurants .heart  {
-
-
-
-                position: absolute;
-                font-size: 1.8em;
-                bottom: 20px;
-                right: 10px;
-                
-            }
+            
 
         /*Footer*/
             
@@ -950,6 +1086,11 @@ img {
 
                 font-size: 0.9em;
                 margin: 5px 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 80%;
+                
             }
 
             .€ {
@@ -1003,78 +1144,5 @@ img {
 
 
          /*Les animations*/
-
-         
-
-         
-         /*Bouton "J'aime"*/
-
-            
-            .heart:hover {
-
-
-                animation: heart 15ms;
-
-            }
-        
-            @keyframes heart {
-
-                
-                from {
-                    transform: scaleX(0);
-                    color: #FF79DA ;
-                }
-                
-                to {
-                    transform: scaleX(1);
-                    color: #FF79DA;
-                }
-                
-                
-            }
-
-         /*Loading spinner*/
-
-
-
-
-
-         /*Affichage du menu en décalé*/
-
-
-            .menu {
-
-                animation: progress-menu 800ms;
-            }
-            
-            @keyframes progress-menu {
-                
-                0% {
-                    transform: scaleX(0);
-                }
-
-                30% {
-                    transform: scaleX(0);
-                }
-
-                60% {
-                    transform: scaleX(0);
-                }
-
-                80% {
-                    transform: scaleX(0);
-                }
-
-
-                100% {
-                    transform: scaleX(1);
-                }
-            }
-
-         /*Coche plats*/
-
-         
-        
-            
     
 }
