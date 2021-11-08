@@ -414,64 +414,51 @@ img {
             display: flex;
             flex-direction: column;
             width: 100%;
-            justify-content: center;
+            justify-content: space-between;
         }
+        
         .menu h5 {
 
-            margin-left: 15px ;
+            margin-left: 10px;
             border-bottom: solid 1px #99E2D0;
             width: 13%;
             padding-bottom: 2px;
         }
 
+    
+
         .menu figure {
 
-            position: relative;
-            width: 95%;
+            
+            width: 50%;
             height: 60px;
             margin: 20px 35px;
-            display: flex;
             padding: 15px 0;
-            flex-direction: column;
-            justify-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             border: solid transparent 1px;
             border-radius: 15px;
             background-color: rgb(238, 238, 238);
             box-shadow: 1px 5px 18px -1px rgba(118,118,118,0.38);
         }
 
-       
 
-        .menu p {
+        .menu figcaption {
 
             font-size: 0.9em;
-            margin: 5px 10px;
+            margin: -10px 10px;
+            width: 40%;
         }
 
         .€ {
 
-            font-size: 1em;
-            position: absolute;
-            right: 15px;
-        }
-
-        .entrees .€ {
             
-            top: 49px;
+            font-size: 0.9em;
         }
+       
 
-        .plats .€ {
-
-            top: 45px;
-        }
-
-        .desserts .€ {
-
-            top: 44px;
-        }
-        
-     
-
+       
      /*Bouton commander*/
 
 
@@ -500,108 +487,236 @@ img {
 
      /*Les animations*/
          
-         /*Bouton "J'aime"*/
+         
+        /*Bouton "J'aime"*/
 
         
-         .heart  {
-
-
-
-            position: absolute;
-            font-size: 1.8em;
-            bottom: 20px;
-            right: 10px;
-            transition: all 1s ease-out;
+         .fa-heart  {
+            
+            font-size: 0.8em;
         }
             
+
+        /* Animation en survol*/
+
+        .heartwhite:hover {
+
+            opacity: 0;
+        }
+       
         .heart:hover {
 
-
-            animation: heart;
+            background: linear-gradient(#9356DC, #FF79DA);
+            color: #9356DC;
+            transform: heart 3s linear;
 
         }
-        
+
         @keyframes heart {
 
-                
-                from {
-                    transform: scaleX(0);
-                    color: #FF79DA ;
-                }
-                
-                to {
-                    transform: scaleX(1);
-                    color: #FF79DA;
-                }
-                
+            0% {
+
+                transform: scale(0);
+                opacity: 1
+            }
+
+
+            50% {
+
+                transform: scale(0.5);
                 
             }
 
-         /*Loading spinner*/
+            100% {
 
-         
+                transform: scale(1);
+            }
+            
+            
+        }
+
+        /*Coeur actif*/
+        
+        .heart {
+
+            background: linear-gradient(#9356DC, #FF79DA);
+            color: #9356DC;
+        }
+        
+        
+        /*Loading spinner*/
+
+          /*Body fondu lors du loader*/
+
+            .pageaccueil {
+            
+                animation: body 2s linear;
+                -webkit-animation: body 2s linear;
+                -o-animation: body 2s linear;
+             
+            }
+        
+            @keyframes body {
+
+                0% {
+                    opacity: 0;
+                }
+
+                20% {
+
+                    opacity: 0.2;
+                }
+                
+                50% {
+
+                    opacity: 0.5;
+                } 
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+        /* Loading... */
+
+        .load {
+
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
 
         .loader {
                 
-            border-top: 16px solid purple;
-            border-right: 16px solid #CDDB0B;
-            border-bottom: 16px solid #0E8F3F;
-            border-left: 16px solid pink;
+            border: 12px solid #99E2D0;
+            border-top: 12px solid #FF79DA ;
+            border-bottom: 12px solid #9356DC;
             border-radius: 50%;
+            width: 110px;
+            height: 110px;
             margin: auto;
-            width: 120px;
-            height: 120px;
-            animation: loading 3s linear infinite;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            animation: loading 3.5s linear 1;
+            -webkit-animation:  loading 3.5s linear 1;
+            -o-animation: loading 3.5s linear 1;
+            animation-fill-mode: forwards;
+            transition: transform 3s;
+            
         }
               
         @keyframes loading {
                 
             0% { 
                     transform: rotate(0deg); 
+                    opacity: 1;
                 }
+
+
             100%{ 
-                    transform: rotate(360deg); 
+                    transform: rotate(360deg);
+                    opacity: 0; 
+
                 }
         }
+
+        /*Body fondu lors du loader*/
+
+
+        @keyframes body {
+                
+            0% { 
+                     
+                    opacity: 0;
+                }
+
+
+            100%{ 
+                    transform: rotate(360deg);
+                    opacity: 0; 
+
+                }
+        }        
          
 
 
-         /*Affichage du menu en décalé*/
+        /*Affichage du menu en décalé*/
 
+        /* Entrées*/
 
-            .menu {
+            .ent {
 
-                animation: progress-menu 1.3s;
+                animation: entree 2.5s;
             }
 
-            @keyframes progress-menu {
-                
+            
+            
+            @keyframes entree {
+
                 0% {
                     transform: scaleX(0);
-                    opacity: .1;
                 }
+
                 
-                17% {
-                    transform: scaleX(.18);
-                }
-                
-                24% {
-                    transform: scaleX(.4);
-                }
-                
-                46% {
-                    transform: scaleX(.81);
-                }
-                
-                85%,100% {
-                    opacity: 1;
-                }
                 100% {
-                    transform: scaleX(1);
+                    transform: scaleY(1);
+                    opacity: 1;
                 }
             }
 
-         /*Coche plats*/
+        /*Plats*/
+
+        
+        .pl {
+
+            animation: plats 2.5s;
+            animation-delay: 2s;
+        }
+
+        
+        
+        @keyframes plats {
+
+            0% {
+                transform: scaleX(0);
+            }
+
+            
+            100% {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+        }
+
+        /*Desserts*/
+
+       
+        .des {
+
+            animation: desserts 4s;
+            animation-delay: 3s;
+        }
+
+        
+        
+        @keyframes desserts {
+            
+            0% {
+                transform: scaleX(0);
+            }
+
+            
+            100% {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+        }
+
+
+        /*Coche plats*/
 
 
          span {
