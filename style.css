@@ -548,19 +548,22 @@ img {
 
 
         .heart2 .far {
+            
             cursor: pointer;
             font-size: 1.8em;
             position: absolute;
             bottom: 25px;
             right: 25px;
-          }
-          .heart2:hover .far {
+        }
+        
+        .heart2:hover .far {
 
-            background: linear-gradient( #9356dc , #ff79dc );
+            background: linear-gradient( #9356dc 0%, #ff79dc 100% (160deg );
             background-clip: text;
             color: transparent;
             z-index: 1;
-          }
+        }
+        
         .heart2 .fas {
 
             background: linear-gradient( #9356dc, #ff79dc);
@@ -574,13 +577,13 @@ img {
         }
           
 
-          .heart2:hover .fas {
+        .heart2:hover .fas {
             -webkit-transform: scale(1);
             transform: scale(1);
             -webkit-transition: 600ms ease-in;
             transition: 600ms ease-in;
             z-index: 0;
-          }
+        }
  
         
         /*Loading spinner*/
