@@ -416,6 +416,27 @@ img {
             width: 100%;
             justify-content: space-between;
         }
+
+        .ent {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .pl {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .des {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
         
         .menu h5 {
 
@@ -490,58 +511,41 @@ img {
          
         /*Bouton "J'aime"*/
 
-        
-         .fa-heart  {
+       
+        /*Coeur W&B*/
+
+        .heartwhite {
             
-            font-size: 0.8em;
+            cursor: pointer;
         }
-            
-
-        /* Animation en survol*/
-
+        
         .heartwhite:hover {
 
-            opacity: 0;
-        }
-       
-        .heart:hover {
-
-            background: linear-gradient(#9356DC, #FF79DA);
-            color: #9356DC;
-            transform: heart 3s linear;
-
+            background: linear-gradient(#9356DC,#FF79DA);
+            -webkit-background-clip: text;
+            color:transparent;
         }
 
-        @keyframes heart {
-
-            0% {
-
-                transform: scale(0);
-                opacity: 1
-            }
+        /*Coeur coloré*/
 
 
-            50% {
+        .heartcolor {
 
-                transform: scale(0.5);
-                
-            }
-
-            100% {
-
+            background: linear-gradient(#9356DC,#FF79DA);
+            -webkit-background-clip: text;
+            color:transparent;
+            transform: scale(0);
+            transform-origin: bottom;
+            cursor: pointer;
+        }
+         
+        .heartcolor:hover {
                 transform: scale(1);
+                transition: 600ms ease-in;
             }
-            
-            
-        }
-
-        /*Coeur actif*/
         
-        .heart {
 
-            background: linear-gradient(#9356DC, #FF79DA);
-            color: #9356DC;
-        }
+        
         
         
         /*Loading spinner*/
