@@ -558,16 +558,16 @@ img {
         
         .heart2:hover .far {
 
-            background: linear-gradient( #9356dc 0%, #ff79dc 100% (160deg );
-            background-clip: text;
+            background: linear-gradient( #9356dc, #ff79dc);
+            -webkit-background-clip: text;
             color: transparent;
-            z-index: 1;
+            z-index: 0;
         }
         
         .heart2 .fas {
 
             background: linear-gradient( #9356dc, #ff79dc);
-            background-clip: text;
+            -webkit-background-clip: text;
             color: transparent;
             -webkit-transform: scale(0);
             transform: scale(0);
@@ -582,7 +582,7 @@ img {
             transform: scale(1);
             -webkit-transition: 600ms ease-in;
             transition: 600ms ease-in;
-            z-index: 0;
+            z-index: 1;
         }
  
         
@@ -590,6 +590,7 @@ img {
 
           /*Body fondu lors du loader*/
 
+            
             .pageaccueil {
             
                 animation: body 2s linear;
@@ -764,15 +765,25 @@ img {
 
         .menu .coche {
 
-            opacity: 0;
-            width: 20%;
-        }
+            
+                opacity: 1;
+                background-color: #99E2D0;
+                border-radius: 0 15px 15px 0;
+            }
+            
+            
+        
 
-        .menu .coche:hover {
+        figure:hover .coche {
             
             animation: slidedroite 1s both;
             border: 0px transparent;
+            width: 40%;
+            height: 60px;
+            bottom: 1px;
             background-color: #99E2D0;
+            border-radius: 0 15px 15px 0;
+            
         }
     
         
@@ -781,7 +792,7 @@ img {
             0% {
                 
                 transform: translateX(100%);
-                visibility: visible;
+                opacity: 1;
             }
 
             100% {
@@ -793,55 +804,23 @@ img {
         /*Coche*/
 
         .validation {
-
            
-            font-size: 0.9em;
+            font-size: 0.7em;
             color: white;
         }
 
-
-        .validation:hover {
+        .coche:hover .validation {
             
-            animation: moove 1s both;
-            -webkit-animation: moove rotate 1s both;
+            
+            transform:  rotate(360deg);
+            transition: transform 2s ease-in-out;
             
         }
-            
-        @keyframes moove {
-                
-            0% {
-                    
-                transform: translateX(100%);
-                visibility: visible;
-            }
-                
-            100% {
-                
-                
-                transform: translateX(0);
-            }
-        } 
-          
+    }
         
-            
-        @keyframes rotate {
-                
-                0% {
-                    
-                    transform-origin: center;
-                    transform: rotate(160deg);
-                    opacity: 0;
-                }
-            
-                100% {
-                    
-                    transform-origin: center;
-                    transform: none;
-                    opacity: 1;
-                }
-        } 
         
-           
+       
+     
 
 
 /* Adaptations */
@@ -1342,7 +1321,8 @@ img {
             .commander {
 
                 width: 50%;
-                margin: none;
+                margin: none;  
+                left: 0;
                 border: solid transparent 1px;
                 border-radius: 80px;
                 background: linear-gradient(#f16cfd, #b454d1);
