@@ -346,7 +346,7 @@ img {
      /*En tête*/
 
        
-       #logomenu {
+    #logomenu {
 
         display: flex;
         flex-direction: row;
@@ -354,23 +354,27 @@ img {
         position: relative;
         border: transparent 1px solid;
         background-color: white;
-       }
+    }
 
 
-       #logomenu i {
+    #logomenu i {
 
         margin: 0 20px;
         font-size: 1.3em;
-        position: absolute;
-        top: 10px;
-        left: 28px;
        
-       }
+    }
+
+    .fleche {
+
+        position: absolute;
+        top: 20px;
+        left: 30px;
+    }
+
 
        #logomenu img {
 
         position: relative;
-        left: 500px;
         height: 25px;
        }
 
@@ -496,13 +500,14 @@ img {
 
             font-size: 0.9em;
             margin: -10px 10px;
-            width: 65%;
+            width: 100%;
         }
 
         .€ {
 
             
             font-size: 0.9em;
+            width: 20%;
         }
        
 
@@ -754,13 +759,13 @@ img {
 
         /*Rectangle de fond */
 
-        .coche {
+        .menu .coche {
 
             opacity: 0;
             width: 20%;
         }
 
-        .coche:hover {
+        .menu .coche:hover {
             
             animation: slidedroite 1s both;
             border: 0px transparent;
@@ -875,6 +880,8 @@ img {
         position: relative;
         left: 250px;
     }
+
+    
 }
 
 
@@ -1172,7 +1179,6 @@ img {
 
             display: flex;
             flex-direction: row;
-            align-items: center;
             border: transparent 1px solid;
             background-color: white;
            }
@@ -1188,7 +1194,6 @@ img {
            #logomenu img {
 
             position: relative;
-            left: 50px;
             height: 25px;
            }
 
@@ -1199,6 +1204,13 @@ img {
             width: 100%;
             
            }
+
+           .fleche {
+
+                position: absolute;
+                top: 15px;
+                left: 5px;
+            }   
 
            .menu {
                 
@@ -1217,7 +1229,7 @@ img {
            .titre {
 
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 text-align: center;
                 width: 100%;
             }
@@ -1258,12 +1270,12 @@ img {
 
                 position: relative;
                 width: 95%;
-                height: 60px;
+                height: 35px;
                 margin: 25px 10px;
                 display: flex;
                 padding: 15px 0;
-                flex-direction: column;
-                justify-items: center;
+                flex-direction: row;
+                justify-items: space-between;
                 border: solid transparent 1px;
                 border-radius: 15px;
                 background-color: rgb(238, 238, 238);
@@ -1271,6 +1283,10 @@ img {
             }
 
            
+            .menu figcaption {
+
+                width: 80%;
+            }
 
             .menu p {
 
@@ -1282,43 +1298,48 @@ img {
                 width: 80%;
                 
             }
+            
+            .menu .€ {
 
-            .€ {
-
-                font-size: 1em;
-                position: absolute;
-                right: 15px;
-            }
-
-            .entrees .€ {
-                
-                top: 49px;
-            }
-
-            .plats .€ {
-
-                top: 45px;
-            }
-
-            .desserts .€ {
-
-                top: 44px;
+                width: 20%;
             }
             
+            .ent {
+
+                display: flex;
+                flex-direction: column;
+            }
+
+            .pl {
+
+                display: flex;
+                flex-direction: column;
+            }
+
+            .des {
+
+                display: flex;
+                flex-direction: column;
+            }
+
+                
+
+          
          
 
          /*Bouton commander*/
 
 
+            .commanderbutton {
+
+                display: flex;
+                justify-content: center;
+            }
+            
             .commander {
 
-                position:relative;
-                bottom: 40px;
-                left: 190px;
-                width: 40%;
-                height: 50px;
-                margin: 20px;
-                color: white;
+                width: 50%;
+                margin: none;
                 border: solid transparent 1px;
                 border-radius: 80px;
                 background: linear-gradient(#f16cfd, #b454d1);
