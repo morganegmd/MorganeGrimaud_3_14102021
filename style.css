@@ -256,15 +256,25 @@ img {
             position: relative;
             font-size: 1.2em;
             margin: 8px;
+            width: 40%;
         }
 
-        .heart {
+        #restaurants .far {
 
-            position: absolute;
             font-size: 1.8em;
+            position: absolute;
             bottom: 25px;
-            right: 10px;  
+            right: 25px;
         }
+
+        #restaurants .fas {
+
+            font-size: 1.8em;
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+          }
+    
 
         
 
@@ -340,7 +350,8 @@ img {
 
         display: flex;
         flex-direction: row;
-        align-items: center;
+        justify-content: center;
+        position: relative;
         border: transparent 1px solid;
         background-color: white;
        }
@@ -350,6 +361,9 @@ img {
 
         margin: 0 20px;
         font-size: 1.3em;
+        position: absolute;
+        top: 10px;
+        left: 28px;
        
        }
 
@@ -385,10 +399,27 @@ img {
        .titre {
 
             display: flex;
+            position: relative;
             justify-content: space-between;
             text-align: center;
             width: 100%;
         }
+
+        .menu .far {
+
+            font-size: 1.8em;
+            position: absolute;
+            bottom: 1px;
+            right: 25px;
+        }
+
+        .menu .fas {
+
+            font-size: 1.8em;
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+          }
 
         .titre h3 {
 
@@ -411,36 +442,33 @@ img {
      
         .plats {
 
-            display: flex;
-            flex-direction: column;
+            
             width: 100%;
-            justify-content: space-between;
+            
         }
 
         .ent {
 
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            width: 100%;
         }
-        
+
         .pl {
 
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            width: 100%;
         }
 
         .des {
 
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            width: 100%;
         }
-        
+
         .menu h5 {
 
-            margin-left: 10px;
+            width: 100%;
+            margin-left:  20px;
             border-bottom: solid 1px #99E2D0;
             width: 13%;
             padding-bottom: 2px;
@@ -451,9 +479,8 @@ img {
         .menu figure {
 
             
-            width: 50%;
+            width: 65%;
             height: 60px;
-            margin: 20px 35px;
             padding: 15px 0;
             display: flex;
             flex-direction: row;
@@ -469,7 +496,7 @@ img {
 
             font-size: 0.9em;
             margin: -10px 10px;
-            width: 40%;
+            width: 65%;
         }
 
         .€ {
@@ -509,44 +536,47 @@ img {
      /*Les animations*/
          
          
-        /*Bouton "J'aime"*/
+        /*Bouton "J'aime"*/  
 
-       
+        
         /*Coeur W&B*/
 
-        .heartwhite {
-            
+
+        .heart2 .far {
             cursor: pointer;
-        }
-        
-        .heartwhite:hover {
+            font-size: 1.8em;
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+          }
+          .heart2:hover .far {
 
-            background: linear-gradient(#9356DC,#FF79DA);
-            -webkit-background-clip: text;
-            color:transparent;
-        }
+            background: linear-gradient( #9356dc , #ff79dc );
+            background-clip: text;
+            color: transparent;
+            z-index: 1;
+          }
+        .heart2 .fas {
 
-        /*Coeur coloré*/
-
-
-        .heartcolor {
-
-            background: linear-gradient(#9356DC,#FF79DA);
-            -webkit-background-clip: text;
-            color:transparent;
+            background: linear-gradient( #9356dc, #ff79dc);
+            background-clip: text;
+            color: transparent;
+            -webkit-transform: scale(0);
             transform: scale(0);
+            -webkit-transform-origin: bottom;
             transform-origin: bottom;
-            cursor: pointer;
+            cursor: pointer;   
         }
-         
-        .heartcolor:hover {
-                transform: scale(1);
-                transition: 600ms ease-in;
-            }
-        
+          
 
-        
-        
+          .heart2:hover .fas {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: 600ms ease-in;
+            transition: 600ms ease-in;
+            z-index: 0;
+          }
+ 
         
         /*Loading spinner*/
 
@@ -722,40 +752,88 @@ img {
 
         /*Coche plats*/
 
+        /*Rectangle de fond */
 
-         span {
+        .coche {
 
-            display: none;
-         }
-         
-         
-         span:hover { 
-             
-            display: flex;
-            color: white;
-            width: 10%;
-            overflow: hidden;
-            transform: rotate(-360deg);
-            transition: transform 1s ease-out;
-         }
-
-         span:hover + .validation {
-
+            opacity: 0;
             width: 20%;
-            border: solid 1px transparent;
+        }
+
+        .coche:hover {
+            
+            animation: slidedroite 1s both;
+            border: 0px transparent;
             background-color: #99E2D0;
-            transform: scale (2,1);
-         }
-        
-         
-       .validation {
-
-         transition: transform 330ms ease-in-out;
-       }
+        }
     
+        
+        @keyframes slidedroite {
+            
+            0% {
+                
+                transform: translateX(100%);
+                visibility: visible;
+            }
+
+            100% {
+                
+                transform: translateX(0);
+            }
+        } 
+          
+        /*Coche*/
+
+        .validation {
+
+           
+            font-size: 0.9em;
+            color: white;
+        }
 
 
-
+        .validation:hover {
+            
+            animation: moove 1s both;
+            -webkit-animation: moove rotate 1s both;
+            
+        }
+            
+        @keyframes moove {
+                
+            0% {
+                    
+                transform: translateX(100%);
+                visibility: visible;
+            }
+                
+            100% {
+                
+                
+                transform: translateX(0);
+            }
+        } 
+          
+        
+            
+        @keyframes rotate {
+                
+                0% {
+                    
+                    transform-origin: center;
+                    transform: rotate(160deg);
+                    opacity: 0;
+                }
+            
+                100% {
+                    
+                    transform-origin: center;
+                    transform: none;
+                    opacity: 1;
+                }
+        } 
+        
+           
 
 
 /* Adaptations */
@@ -789,16 +867,7 @@ img {
         
     }
 
-    .heart {
-
-
-
-        position: absolute;
-        font-size: 1.8em;
-        bottom: 25px;
-        right: 10px;
-        
-    }
+  
     
 
     .commander {
