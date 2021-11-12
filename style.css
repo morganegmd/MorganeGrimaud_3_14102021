@@ -2,8 +2,8 @@
 
 body {
     font: normal 1.1em 'Roboto','Shrikhand', sans-serif;
-    overflow-x: hidden;
     margin: 0;
+    text-overflow: ellipsis;
 }
 
 
@@ -488,6 +488,7 @@ img {
             padding: 15px 0;
             display: flex;
             flex-direction: row;
+            align-items: center;
             justify-content: space-between;
             border: solid transparent 1px;
             border-radius: 15px;
@@ -504,6 +505,10 @@ img {
             align-items: center;
         }
 
+        .menu .€ {
+
+        width: 20%;
+        }
         
        
 
@@ -766,6 +771,8 @@ img {
                 opacity: 1;
                 background-color: #99E2D0;
                 border-radius: 0 15px 15px 0;
+                height: 90px;
+                
             }
             
             
@@ -774,12 +781,11 @@ img {
         figure:hover .coche {
             
             animation: slidedroite 1s both;
-            border: 0px transparent;
-            width: 40%;
-            height: 60px;
-            bottom: 1px;
+            border: 2px #99E2D0;
+            width: 25%;
             background-color: #99E2D0;
             border-radius: 0 15px 15px 0;
+            
             
         }
     
@@ -788,20 +794,22 @@ img {
             
             0% {
                 
-                transform: translateX(80%);
+                transform: translate(5px)  scaleX(0);
                 opacity: 1;
+
+               
             }
 
             100% {
                 
-                transform: translateX(0);
+                transform: translate(5px) scaleX(100%);
             }
         } 
           
         /*Coche*/
 
         
-        .validation .ok {
+         .validation {
            
             font-size: 0.7em;
             color: white;
@@ -810,15 +818,25 @@ img {
         .coche:hover .ok {
             
             
-            transform:  rotate(360deg);
-            transition: transform 2s ease-in-out;
+            animation: rotatecoche 4s 1;
             
         }
-    
         
-        
-       
-     
+        @keyframes rotatecoche {
+            
+            0% {
+                
+                transform: rotate(0deg);
+
+               
+            }
+
+            100% {
+                
+                transform: rotate(360deg);
+            }
+        } 
+       
 
 
 /* Adaptations */
@@ -1256,6 +1274,7 @@ img {
                 padding: 15px 0;
                 flex-direction: row;
                 justify-items: space-between;
+                align-items: center;
                 border: solid transparent 1px;
                 border-radius: 15px;
                 background-color: rgb(238, 238, 238);
