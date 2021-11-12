@@ -809,33 +809,23 @@ img {
         /*Coche*/
 
         
-         .validation {
+         .ok {
            
             font-size: 0.7em;
             color: white;
+            transition: transform 1s;
         }
 
-        .coche:hover .ok {
+        figure:hover .ok {
             
             
-            animation: rotatecoche 4s 1;
+            transform: rotate(360deg);
             
         }
+
+      
         
-        @keyframes rotatecoche {
-            
-            0% {
-                
-                transform: rotate(0deg);
-
-               
-            }
-
-            100% {
-                
-                transform: rotate(360deg);
-            }
-        } 
+     
        
 
 
