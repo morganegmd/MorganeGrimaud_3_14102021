@@ -768,6 +768,12 @@ img {
         .menu .coche {
 
                
+                transition: 400ms;
+                width: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
                 opacity: 1;
                 background-color: #99E2D0;
                 border-radius: 0 15px 15px 0;
@@ -780,7 +786,7 @@ img {
 
         figure:hover .coche {
             
-            animation: slidedroite 1s both;
+           
             border: 2px #99E2D0;
             width: 25%;
             background-color: #99E2D0;
@@ -790,36 +796,21 @@ img {
         }
     
         
-        @keyframes slidedroite {
-            
-            0% {
-                
-                transform: translate(5px)  scaleX(0);
-                opacity: 1;
-
-               
-            }
-
-            100% {
-                
-                transform: translate(5px) scaleX(100%);
-            }
-        } 
-          
+        
         /*Coche*/
 
         
-         .ok {
+         .circle {
            
             font-size: 0.7em;
             color: white;
-            transition: transform 1s;
+            transition: 500ms;
         }
 
-        figure:hover .ok {
+        .circle:hover {
             
             
-            transform: rotate(360deg);
+            transform: rotate(1turn);
             
         }
 
