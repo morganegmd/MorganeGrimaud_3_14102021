@@ -3,7 +3,6 @@
 body {
     font: normal 1.1em 'Roboto','Shrikhand', sans-serif;
     margin: 0;
-    text-overflow: ellipsis;
 }
 
 
@@ -36,6 +35,11 @@ figcaption p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+article {
+
+    width: 44%;
 }
 
 
@@ -199,6 +203,12 @@ button:active {
     text-align: center;
 }
 
+.filtrediv:hover {
+
+    background-color: #e6c4f0;
+    cursor: pointer;
+}
+
 
 /*Restaurants*/
         
@@ -219,6 +229,7 @@ button:active {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 
 
@@ -233,17 +244,18 @@ button:active {
 #restaurants figure {
 
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    width: 70%;
     height: 320px;
     border: solid 1px white;
     background-color: white;
     border-radius: 15px;
     box-shadow: 5px 3px 5px 3px #D8D8D8;
+}
+
+#restaurants figure div {
+
+    width: 100%;
 }
 
 #restaurants img {
@@ -270,9 +282,9 @@ button:active {
 #restaurants figcaption {
 
     position: relative;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 8px;
-    width: 40%;
+    width: 100%;
 }
 
 #restaurants .far {
@@ -519,12 +531,17 @@ footer h3 {
 
 /*Bouton commander*/
 
+.commanderbutton {
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
 
 .commander {
 
     position:relative;
-    bottom: 40px;
-    left: 500px;
     width: 20%;
     height: 50px;
     margin: 20px;
@@ -557,8 +574,6 @@ footer h3 {
     cursor: pointer;
     font-size: 1.8em;
     position: absolute;
-    bottom: 25px;
-    right: 25px;
 }
         
 .heart2:hover .far {
@@ -840,6 +855,11 @@ figure:hover .circle {
 
         width: 100%;
     }
+
+    article {
+
+        width: 100%;
+    }
     
 
     .new {
@@ -864,12 +884,6 @@ figure:hover .circle {
     .commandes {
 
         flex-direction: column;
-    }
-
-    .commander {
-
-        position: relative;
-        left: 250px;
     }
 
 
@@ -928,6 +942,11 @@ figure:hover .circle {
 @media screen and (min-width: 300px) and (max-width: 729px)
 
 {
+
+    article {
+
+        width: 100%;
+    }
 
                  /*Présentation restaurants*/
 
@@ -1106,6 +1125,32 @@ figure:hover .circle {
                 position: relative;
                 left: 10px;
             }
+            
+            
+            #restaurants .far {
+
+                    font-size: 1.8em;
+                    position: absolute;
+                    bottom: 25px;
+                    right: 25px;
+            }
+                
+            #restaurants .heartcolor {
+                
+                    font-size: 1.8em;
+                    position: absolute;
+                    bottom: 25px;
+                    right: 25px;
+            }
+            
+            
+            #restaurants .heartcolor {
+            
+                font-size: 1.8em;
+                position: absolute;
+                bottom: 25px;
+                right: 25px;
+            }
 
             #restaurants figure {
 
@@ -1250,7 +1295,22 @@ figure:hover .circle {
             width: 100%;
             
            }
+           
+        .menu .far {
 
+            font-size: 1.8em;
+            position: absolute;
+            top: -10px;
+            right: 30px;
+        }
+        
+        .menu .heartcolor {
+        
+            font-size: 1.8em;
+            position: absolute;
+            top: -10px;
+            right: 30px;
+        }
            
 
            .menu {
@@ -1335,13 +1395,13 @@ figure:hover .circle {
                 font-size: 0.9em;
                 margin: 5px 3px;
                 white-space: nowrap;
-                width: 80%;
+                width: 100%;
                 
             }
             
             .menu .€ {
 
-                width: 10%;
+                width: 20%;
                 margin: 0 5px;
             }
             
@@ -1375,13 +1435,13 @@ figure:hover .circle {
 
                 display: flex;
                 justify-content: center;
+                margin-bottom: 15px;
             }
             
             .commander {
 
                 width: 50%;
-                margin: none;  
-                left: 0;
+                margin: none;
                 border: solid transparent 1px;
                 border-radius: 80px;
                 background: linear-gradient(#f16cfd, #b454d1);
@@ -1398,11 +1458,17 @@ figure:hover .circle {
 
          /*Les animations*/
 
-         .menu .coche {
+         
+        .menu .coche {
 
 
             height: 70px;
             
+        }
+
+        .heartcolor {
+
+            bottom: px;
         }
     
 }
