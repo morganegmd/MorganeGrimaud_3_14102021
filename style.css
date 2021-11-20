@@ -441,7 +441,7 @@ footer h3 {
 
     font-size: 1.8em;
     position: absolute;
-    top: 4px;
+    bottom: 1px;
     right: 25px;
 }
 
@@ -871,6 +871,11 @@ figure:hover .circle {
 
     }
 
+    #restaurants h2 {
+
+        width: 30%;
+    }
+
     #restaurants figure {
 
        
@@ -880,6 +885,11 @@ figure:hover .circle {
     }
 
     /*Menu*/
+    
+    .section {
+
+        margin-bottom: 0px;
+    }
     
     .commandes {
 
@@ -919,9 +929,33 @@ figure:hover .circle {
         justify-content: center;
     }
 
+    .ent {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pl {     
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .des {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .menu figure {
 
-        width: 80%;
+        width: 70%;
     }
 
     .menu figcaption {
@@ -933,6 +967,17 @@ figure:hover .circle {
     .menu p {
 
         font-size: 1.3em;
+    }
+
+    .commanderbutton {
+
+        width: 100%;
+        margin-top: 25px;
+    }
+
+    footer {
+
+        width: 99%;
     }
 }
 
