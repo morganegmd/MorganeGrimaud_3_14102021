@@ -237,6 +237,7 @@ button:active {
 
     position: relative;
     font-size: 1.6em;
+    width: 30%;
     left: 120px;
     top: 20px;
 }
@@ -495,7 +496,6 @@ footer h3 {
     width: 15%;
     padding-bottom: 2px;
 }
-
     
 .menu figure {
 
@@ -871,10 +871,7 @@ figure:hover .circle {
 
     }
 
-    #restaurants h2 {
-
-        width: 30%;
-    }
+    
 
     #restaurants figure {
 
